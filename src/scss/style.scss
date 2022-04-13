@@ -1,0 +1,157 @@
+// Библиотеки
+@use 'sass:math';
+
+// Подключаемые шрифты
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Quicksand:wght@300;400;500;700&family=Roboto:wght@400;500&display=swap');
+// @import "fonts";
+
+// Шрифт по умолчанию
+$fontfamily:'Roboto', sans-serif;
+
+// Переменные
+$containerWidth: 900;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1400: 1339.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Обнуление, общие параметры
+@import 'base/null';
+@import 'base/mixins';
+@import 'libs/libs';
+
+// Оболочка
+body {
+	@include roboto;
+	color: #3D4F9F;
+	background-color: #fff;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+// Основная сетка
+.container {
+	max-width: ($containerWidth + $containerPadding) + px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 90px $containerSidePadding + px;
+
+	@media (max-width: $breakpoint992) {
+		max-width: 970px;
+	}
+
+	@media (max-width: $breakpoint768) {
+		max-width: 750px;
+	}
+
+	@media (max-width: $breakpoint480) {
+		max-width: none;
+	}
+	&__wide {
+		max-width: (1100 + $containerPadding) + px;
+	}
+
+}
+
+// Подключение файлов/стилей/страниц и элементов
+@import "base/ui";
+@import "common";
+@import "header";
+@import "home";
+@import "footer";
+@import "base/swiper";
+@import "base/forms/forms";
+
+// Основные элементы
+// Пример: 
+
+// <-- HTML -->
+// <main class="page page__home">
+// 	<section class="page__main-block"></section>
+// </main>
+// <-- / HTML -->
+
+// <-- CSS -->
+// .page {
+
+// 	&__home {
+// 	}
+
+// 	&__main-block {
+// 	}
+// }
+// <-- / CSS -->
+
+.page {
+
+	&__section-hero {
+		position: relative;
+	}
+	&__section-customers {
+		.container {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+	}
+	&__section-plan-and-manage {
+		position: relative;
+		background-color: #F5F8FF;
+		.container {
+			padding-top: 170px;
+			padding-bottom: 170px;
+		}
+	}
+	&__section-about-us {
+		position: relative;
+		background: url("../img/about/clouds.svg") 50% no-repeat;
+		.container {
+			padding-top: 170px;
+			padding-bottom: 170px;
+		}
+	}
+	&__section-stats {
+		.container {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+	}
+	&__section-blog {
+		background-color: #F5F8FF;
+		position: relative;
+	}
+	&__section-quotes {
+		background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+	}
+	&__section-faq {
+		.container {
+			padding-top: 170px;
+			padding-bottom: 170px;
+		}
+	}
+	&__section-get-started {
+		background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+	}
+	&__section-newsletter {
+		background-color: #FCFDFF;
+		.container {
+			padding-top: 120px;
+			padding-bottom: 120px;
+		}
+	}
+}
+
+
+
+
+

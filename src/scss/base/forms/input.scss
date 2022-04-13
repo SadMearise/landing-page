@@ -1,0 +1,15 @@
+.form {
+	&__input {
+		background: #EFEFF7;
+		border: 1px solid transparent;
+		border-radius: 5px;
+		color: #7a85ad;
+		@include quicksand;
+		font-weight: 700;
+		font-size: 13px;
+		line-height: 16px;
+		padding: 20px 23px;
+		margin-right: 14px;
+		flex-grow: 1;
+	}
+}
