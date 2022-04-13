@@ -31,14 +31,14 @@ html, body {
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 input, button, textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 input::-ms-clear {
@@ -77,7 +77,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 body {
-  font-family: "Roboto", sans-serif;
   color: #3D4F9F;
   background-color: #fff;
 }
@@ -130,27 +129,21 @@ body.lock {
   object-fit: cover;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 48px;
-  font-weight: normal;
-}
-
-h3 {
-  font-size: 36px;
-  line-height: 125%;
-}
-
-h4 {
+.fz24 {
   font-size: 24px;
   line-height: 125%;
 }
 
-h5 {
+.fz36 {
+  font-size: 36px;
+  line-height: 125%;
+}
+
+.fz48 {
+  font-size: 48px;
+}
+
+h2 {
   font-size: 10px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -159,6 +152,17 @@ h5 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #3D4F9F;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 .section-outer {
@@ -205,7 +209,7 @@ h5 {
 .socials__item + .socials__item {
   padding-left: 35px;
 }
-.socials__link img path {
+.socials__link path {
   fill: #B6BAC7;
   transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
@@ -213,7 +217,7 @@ h5 {
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
 }
-.socials__link img:hover path {
+.socials__link:hover path {
   fill: #6188FF;
 }
 
@@ -402,13 +406,16 @@ h5 {
   text-align: center;
   width: 100%;
 }
-.slide-content__subtitle {
+.slide-content__title {
   margin-bottom: 16px;
 }
-.slide-content__title {
+.slide-content__subtitle {
   margin-bottom: 28px;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 125%;
 }
-.slide-content__title span {
+.slide-content__subtitle span {
   font-weight: 500;
 }
 .slide-content__text {
@@ -466,6 +473,10 @@ h5 {
 }
 .plan__subtitle {
   margin-bottom: 27px;
+  font-weight: 400;
+}
+.plan__subtitle span {
+  font-weight: 500;
 }
 .plan__title {
   margin-bottom: 27px;
@@ -487,6 +498,9 @@ h5 {
   text-align: center;
 }
 .about-us__subtitle {
+  font-weight: 500;
+}
+.about-us__title {
   margin-bottom: 20px;
 }
 .about-us__center {
@@ -554,9 +568,6 @@ h5 {
   color: #ADB3CB;
 }
 
-.stats {
-  font-family: "Quicksand", sans-serif;
-}
 .stats__row {
   display: flex;
 }
@@ -593,8 +604,11 @@ h5 {
   margin-bottom: 92px;
   text-align: center;
 }
-.blog__subtitle {
+.blog__title {
   margin-bottom: 20px;
+}
+.blog__subtitle {
+  font-weight: 500;
 }
 .blog__main {
   position: relative;
@@ -704,39 +718,6 @@ h5 {
   margin-right: -107px;
 }
 
-.get-started__clouds {
-  background: url("../img/get-started/clouds.svg") no-repeat 50% 50%;
-}
-.get-started__block {
-  text-align: center;
-  color: #FFFFFF;
-  max-width: 712px;
-  margin: 0 auto;
-}
-.get-started__subtitle {
-  color: #FFFFFF;
-  margin-bottom: 16px;
-}
-.get-started__title {
-  font-weight: 300;
-  margin-bottom: 28px;
-}
-.get-started__title span {
-  font-weight: 500;
-}
-.get-started__text {
-  margin-bottom: 28px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 193.3333333333%;
-  letter-spacing: 0.03em;
-}
-.get-started__btns {
-  display: flex;
-  justify-content: center;
-}
-
 .quotes__row {
   display: flex;
 }
@@ -746,11 +727,12 @@ h5 {
 .quotes__right-side {
   min-width: 45%;
 }
-.quotes__subtitle {
+.quotes__title {
   margin-bottom: 31px;
 }
-.quotes__title {
+.quotes__subtitle {
   margin-bottom: 14px;
+  font-weight: 500;
 }
 .quotes__text {
   font-family: "Open Sans", sans-serif;
@@ -813,14 +795,11 @@ h5 {
 .faq__header {
   text-align: center;
 }
-.faq__subtitle {
+.faq__title {
   margin-bottom: 20px;
 }
-.faq__title {
-  font-family: "Quicksand", sans-serif;
+.faq__subtitle {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 125%;
   margin-bottom: 68px;
 }
 .faq__accordion-item {
@@ -836,7 +815,6 @@ h5 {
   margin-right: 24px;
 }
 .accordion__title {
-  font-family: "Quicksand", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -869,6 +847,39 @@ h5 {
   font-weight: 700;
 }
 
+.get-started__clouds {
+  background: url("../img/get-started/clouds.svg") no-repeat 50% 50%;
+}
+.get-started__block {
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 712px;
+  margin: 0 auto;
+}
+.get-started__title {
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.get-started__subtitle {
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+.get-started__subtitle span {
+  font-weight: 500;
+}
+.get-started__text {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 193.3333333333%;
+  letter-spacing: 0.03em;
+}
+.get-started__btns {
+  display: flex;
+  justify-content: center;
+}
+
 .newsletter__row {
   display: flex;
   justify-content: space-between;
@@ -880,8 +891,9 @@ h5 {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   font-size: 18px;
+  letter-spacing: normal;
+  text-transform: none;
   line-height: 122.2222222222%;
-  color: #3D4F9F;
   margin-bottom: 18px;
 }
 .newsletter__right {

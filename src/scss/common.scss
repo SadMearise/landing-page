@@ -1,22 +1,19 @@
 // Заголовки, общие БЭМ блоки и прочее
-h1, h2, h3, h4, h5, h6 {
-	@include quicksand;
-	font-weight: 500;
-}
-
-h2 { 
-	font-size: 48px;
-	font-weight: normal;
-}
-h3 { 
-	font-size: 36px;
-	line-height: calc(45 / 36 * 100%);
-}
-h4 { 
+.fz24 {
 	font-size: 24px;
 	line-height: calc(30 / 24 * 100%);
 }
-h5 { 
+
+.fz36 {
+	font-size: 36px;
+	line-height: calc(45 / 36 * 100%);
+}
+
+.fz48 {
+	font-size: 48px;
+}
+
+h2 { 
 	font-size: 10px;
 	@include roboto;
 	font-style: normal;
@@ -24,8 +21,17 @@ h5 {
 	line-height: calc(12 / 10 * 100%);
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-
 	color: #3D4F9F;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
 }
 
 .section-outer {
@@ -95,17 +101,17 @@ h5 {
 	}
 
 	&__link {
-		img {
+		
+		path {
+			fill: #B6BAC7;
+			@include anim(.3s, 0s);
+		}
+		&:hover {
 			path {
-				fill: #B6BAC7;
-				@include anim(.3s, 0s);
-			}
-			&:hover {
-				path {
-					fill: #6188FF;
-				}
+				fill: #6188FF;
 			}
 		}
+		
 		
 	}
 }

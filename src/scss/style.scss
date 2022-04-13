@@ -6,7 +6,7 @@
 // @import "fonts";
 
 // Шрифт по умолчанию
-$fontfamily:'Roboto', sans-serif;
+$fontfamily: 'Quicksand', sans-serif;
 
 // Переменные
 $containerWidth: 900;
@@ -24,7 +24,6 @@ $breakpoint480: 479.98 + px;
 
 // Оболочка
 body {
-	@include roboto;
 	color: #3D4F9F;
 	background-color: #fff;
 	&.lock {

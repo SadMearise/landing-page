@@ -26,12 +26,16 @@
 		width: 100%;
 	}
 
-	&__subtitle {
+	&__title {
 		margin-bottom: 16px;
 	}
 
-	&__title {
+	&__subtitle {
+		
 		margin-bottom: 28px;
+		font-weight: 300;
+		font-size: 48px;
+		line-height: calc(60 / 48 * 100%);
 		span {
 			font-weight: 500;
 		}
@@ -108,6 +112,12 @@
 
 	&__subtitle {
 		margin-bottom: 27px;
+		
+		font-weight: 400;
+		
+		span {
+			font-weight: 500;
+		}
 	}
 
 	&__title {
@@ -142,11 +152,13 @@
 	}
 
 	&__subtitle {
-		margin-bottom: 20px;
+		
+		font-weight: 500;
+		
 	}
 
 	&__title {
-		
+		margin-bottom: 20px;
 	}
 
 	&__center {
@@ -169,7 +181,7 @@
 			position: absolute;
 			width: 28px;
 			height: 1px;
-			background-color:#DAE4FE;
+			background-color: #DAE4FE;
 			top: 125px;
 			left: -54.5px;
 		}
@@ -236,7 +248,6 @@
 }
 
 .stats {
-	@include quicksand;
 
 	&__row {
 		display: flex;
@@ -288,11 +299,12 @@
 		text-align: center;
 	}
 
-	&__subtitle {
+	&__title {
 		margin-bottom: 20px;
 	}
 
-	&__title {
+	&__subtitle {
+		font-weight: 500;
 	}
 
 	&__main {
@@ -423,45 +435,6 @@
 	}
 }
 
-.get-started {
-	&__clouds {
-		background: url("../img/get-started/clouds.svg") no-repeat 50% 50%;
-	}
-	&__block {
-		text-align: center;
-		color: #FFFFFF;
-		max-width: 712px;
-		margin: 0 auto;
-	}
-
-	&__subtitle {
-		color: #FFFFFF;
-		margin-bottom: 16px;
-	}
-
-	&__title {
-		font-weight: 300;
-		margin-bottom: 28px;
-		span {
-			font-weight: 500;
-		}
-	}
-
-	&__text {
-		margin-bottom: 28px;
-		@include roboto;
-		font-weight: 400;
-		font-size: 15px;
-		line-height: calc(29 / 15 * 100%);
-		letter-spacing: 0.03em;
-	}
-
-	&__btns {
-		display: flex;
-		justify-content: center;
-	}
-}
-
 .quotes {
 	
 	&__row {
@@ -476,12 +449,14 @@
 		min-width: 45%;
 	}
 
-	&__subtitle {
+	&__title {
 		margin-bottom: 31px;
 	}
 
-	&__title {
+	&__subtitle {
 		margin-bottom: 14px;
+		
+		font-weight: 500;
 	}
 
 	&__text {
@@ -562,15 +537,14 @@
 		text-align: center;
 	}
 
-	&__subtitle {
+	&__title {
 		margin-bottom: 20px;
 	}
 
-	&__title {
-		@include quicksand;
+	&__subtitle {
+		
 		font-weight: 500;
-		font-size: 24px;
-		line-height: calc(30 / 24 * 100%);
+		
 		margin-bottom: 68px;
 	}
 
@@ -595,7 +569,7 @@
 	}
 
 	&__title {
-		@include quicksand;
+		
 		font-style: normal;
 		font-weight: 500;
 		font-size: 15px;
@@ -638,6 +612,46 @@
 	}
 }
 
+.get-started {
+	&__clouds {
+		background: url("../img/get-started/clouds.svg") no-repeat 50% 50%;
+	}
+	&__block {
+		text-align: center;
+		color: #FFFFFF;
+		max-width: 712px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		color: #FFFFFF;
+		margin-bottom: 16px;
+	}
+
+	&__subtitle {
+		
+		font-weight: 300;
+		margin-bottom: 28px;
+		span {
+			font-weight: 500;
+		}
+	}
+
+	&__text {
+		@include roboto;
+		margin-bottom: 28px;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: calc(29 / 15 * 100%);
+		letter-spacing: 0.03em;
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: center;
+	}
+}
+
 .newsletter {
 
 	&__row {
@@ -652,8 +666,9 @@
 		@include quicksand;
 		font-weight: 700;
 		font-size: 18px;
+		letter-spacing: normal;
+		text-transform: none;
 		line-height: calc(22 / 18 * 100%);
-		color: #3D4F9F;
 		margin-bottom: 18px;
 	}
 
