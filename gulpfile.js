@@ -27,7 +27,6 @@ import { svgSprive } from "./gulp/tasks/svgSprive.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 
-
 // Наблюдатель за изменениями в файлах
 function watcher() {
 	// gulp.watch(path.watch.files, gulp.series(copy, ftp)); Если хотим автоматом отправлять изменения на сервер(проделать с каждым пунктом задачи)

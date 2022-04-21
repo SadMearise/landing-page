@@ -5,6 +5,32 @@
 	}
 
 	&__navigation {
+		justify-content: space-between;
+		position: relative;
+		@media (max-width: $breakpoint992) {
+			align-items: flex-start;
+			.main-navigation__socials {
+				margin-bottom: 25px;
+			}
+		}
+		.main-navigation__menu {
+			@media (min-width: $breakpoint992) {
+				position: absolute;
+				left: 99px;
+			}
+			@media (max-width: $breakpoint992) {
+				.menu__list {
+					flex-direction: column;
+					text-align: center;
+				}
+				.menu__item {
+					margin: 0 0 25px 0;
+				}
+				.menu__link {
+					font-size: 18px;
+				}
+			}
+		}
 	}
 }
 

@@ -11,5 +11,8 @@
 		padding: 20px 23px;
 		margin-right: 14px;
 		flex-grow: 1;
+		@media (max-width: $breakpoint480) {
+			margin: 0 0 10px 0;
+		}
 	}
 }
